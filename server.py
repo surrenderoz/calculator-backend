@@ -85,4 +85,4 @@ def checkServer():
     })
 
 if __name__ == '__main__':
-    app.run(port=3002, host="18.191.23.206")
+    app.run(port=3002, host="0.0.0.0")
