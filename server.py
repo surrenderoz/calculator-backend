@@ -77,5 +77,12 @@ def calculate_subsets():
         logging.error("Error in calculation: %s", str(e))
         return jsonify({"error": str(e)}), 500
 
+@app.route('/api', methods=['GET'])
+@cross_origin(origin='*',headers=['Content- Type','Authorization'])
+def checkServer():
+    return jsonify({
+        "message": "working fine"
+    })
+
 if __name__ == '__main__':
     app.run(debug=True, port=3002)
